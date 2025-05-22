@@ -7,7 +7,7 @@ const Header = ({setAddTaskDiv}) => {
     const navigate = useNavigate()
     const logOut = async()=>{
         try {
-            const res = await axios.post("http://localhost:1000/api/v1/logout",{},{withCredentials:true})
+            const res = await axios.post("https://task-backend-brown.vercel.app/api/v1/logout",{},{withCredentials:true})
             alert(res.data.success)
             localStorage.clear("userLoggedIn")
             navigate("/login")
