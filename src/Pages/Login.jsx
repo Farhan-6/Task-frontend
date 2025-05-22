@@ -16,7 +16,7 @@ const Login = () => {
         const login = async(e)=>{
             e.preventDefault()
             try {
-                const res= await axios.post('http://localhost:1000/api/v1/login',Values,
+                const res= await axios.post('https://task-backend-brown.vercel.app/api/v1/login',Values,
                     { withCredentials: true}
                 )
                 localStorage.setItem("userLoggedIn" , "yes")
