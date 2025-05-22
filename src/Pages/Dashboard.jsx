@@ -18,7 +18,7 @@ const Dashboard = () => {
     useEffect(() => {
   const fetchTasks = async () => {
     try {
-      const res = await axios.get("http://localhost:1000/api/v1/userDetails", { withCredentials: true });
+      const res = await axios.get("https://task-backend-brown.vercel.app/api/v1/userDetails", { withCredentials: true });
       setTasks(res.data.tasks);
     } catch (error) {
       console.error("Failed to fetch tasks", error);
