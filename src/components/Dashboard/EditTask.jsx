@@ -20,7 +20,7 @@ const EditTask = ({setEditTaskDiv,EditTaskId}) => {
         useEffect(()=>{
             const fetchDetails = async ()=>{
                 try {
-                    const res = await axios.get(`http://localhost:1000/api/v1/getTask/${EditTaskId}`,{withCredentials:true})
+                    const res = await axios.get(`https://task-backend-brown.vercel.app/api/v1/getTask/${EditTaskId}`,{withCredentials:true})
                     setValues(res.data.taskDetails)
                 } catch (error) {
                     
