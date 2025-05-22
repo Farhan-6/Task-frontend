@@ -34,7 +34,7 @@ const EditTask = ({setEditTaskDiv,EditTaskId}) => {
         e.preventDefault();
         try {
             const res = await axios.put(
-                `http://localhost:1000/api/v1/editTask/${id}`,
+                `https://task-backend-brown.vercel.app/api/v1/editTask/${id}`,
                 Values,
                 { withCredentials: true }
             );
@@ -52,7 +52,7 @@ const EditTask = ({setEditTaskDiv,EditTaskId}) => {
         e.preventDefault();
         try {
             const res = await axios.delete(
-                `http://localhost:1000/api/v1/deleteTask/${id}`,
+                `https://task-backend-brown.vercel.app/api/v1/deleteTask/${id}`,
                 { withCredentials: true }
             );
 
