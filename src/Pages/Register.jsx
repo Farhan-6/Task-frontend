@@ -20,7 +20,7 @@ const Register = () => {
     const register = async(e)=>{
         e.preventDefault()
         try {
-            const res= await axios.post('http://localhost:1000/api/v1/register',Values)
+            const res= await axios.post('https://task-backend-brown.vercel.app/api/v1/register',Values)
             alert(res.data.success)
             navigate('/login')
         } catch (error) {
