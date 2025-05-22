@@ -18,7 +18,7 @@ const AddTask = ({ setAddTaskDiv }) => {
         e.preventDefault();
         try {
             const res = await axios.post(
-                "http://localhost:1000/api/v1/addTask",
+                "https://task-backend-brown.vercel.app/api/v1/addTask",
                 Values,
                 { withCredentials: true }
             );
